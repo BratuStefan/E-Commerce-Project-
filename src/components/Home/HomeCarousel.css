@@ -1,0 +1,45 @@
+.carousel_container {
+  margin-top: -4%;
+  position: relative;
+}
+
+.carousel_text {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 20%;
+  color: white;
+  pointer-events: none;
+  text-align: center;
+}
+
+.carousel_text button {
+  pointer-events: all;
+}
+
+.carousel_text_mobile {
+  display: none;
+  color: black;
+}
+
+.home_text_red {
+  color: red;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .carousel_text {
+   display: none;
+  }
+  .carousel_text_mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;  
+}
+}
