@@ -1,8 +1,25 @@
-function SearchBar() {
+import { useEffect, useState } from "react";
+function SearchBar({ handleGetSearchResults }) {
+	const [inputSearch, setImputSearch] = useState("");
+
+	useEffect(() => {
+		setImputSearch("");
+	}, []);
+
+	useEffect(() => {
+		handleGetSearchResults(inputSearch);
+	}, [inputSearch]);
 	return (
-		<>
-			<input type='text' />
-		</>
+		<div>
+			<input
+				value={inputSearch}
+				type='text'
+				placeholder='search...'
+				onChange={(e) => {
+					setImputSearch(e.target.value);
+				}}
+			/>
+		</div>
 	);
 }
 
