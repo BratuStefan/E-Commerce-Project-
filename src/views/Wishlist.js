@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 
-function Wishlist({ handleGetWishItemNumber }) {
+function Wishlist() {
 	const [wishItem, setWishItem] = useState([]);
 
 	const onDelete = (id) => {
@@ -20,10 +20,6 @@ function Wishlist({ handleGetWishItemNumber }) {
 		}
 	}, []);
 
-	useEffect(() => {
-		handleGetWishItemNumber(wishItem);
-	}, [wishItem]);
-
 	return (
 		<>
 			<Container style={{ border: "1px solid black", minHeight: "50vh" }}>
@@ -33,6 +29,11 @@ function Wishlist({ handleGetWishItemNumber }) {
 							return (
 								<Row key={"prod_wishlist_" + prod.id}>
 									<Col style={{ display: "flex", gap: "3%" }}>
+										<img
+											src={prod.image}
+											alt=''
+											style={{ maxHeight: "100px", maxWidth: "100px" }}
+										/>
 										<h3>{prod.title}</h3>
 										<Button
 											color='danger'

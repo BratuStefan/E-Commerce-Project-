@@ -3,12 +3,20 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-function Navbar({ handlePlaceWishItemNumber }) {
-	const [wistListItemNumber, setWistListItemNumber] = useState([]);
+function Navbar() {
+	const [wishListNrOfItems, setwishListNrOfItems] = useState(() => {
+		const saved = localStorage.getItem("productList");
+		const initialValue = JSON.parse(saved);
+		return initialValue || "";
+	});
 
 	useEffect(() => {
-		setWistListItemNumber(handlePlaceWishItemNumber);
-	}, [handlePlaceWishItemNumber]);
+		setwishListNrOfItems(() => {
+			const saved = localStorage.getItem("productList");
+			const initialValue = JSON.parse(saved);
+			return initialValue || "";
+		});
+	});
 
 	return (
 		<div className='nav_container'>
@@ -30,7 +38,7 @@ function Navbar({ handlePlaceWishItemNumber }) {
 			</div>
 			<div className='nav_section'>
 				<Link to='/wishlist' className='nav_item'>
-					<h4>Wishlist({wistListItemNumber.length})</h4>
+					<h4>Wishlist({wishListNrOfItems.length})</h4>
 				</Link>
 			</div>
 		</div>
