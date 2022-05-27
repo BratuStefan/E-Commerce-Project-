@@ -1,8 +1,15 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-function Navbar() {
+function Navbar({ handlePlaceWishItemNumber }) {
+	const [wistListItemNumber, setWistListItemNumber] = useState([]);
+
+	useEffect(() => {
+		setWistListItemNumber(handlePlaceWishItemNumber);
+	}, [handlePlaceWishItemNumber]);
+
 	return (
 		<div className='nav_container'>
 			<div className='nav_section'>
@@ -23,7 +30,7 @@ function Navbar() {
 			</div>
 			<div className='nav_section'>
 				<Link to='/wishlist' className='nav_item'>
-					<h4>Wishlist(0)</h4>
+					<h4>Wishlist({wistListItemNumber.length})</h4>
 				</Link>
 			</div>
 		</div>

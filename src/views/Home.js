@@ -21,7 +21,6 @@ function Home({ products }) {
 			<h2 className='trending_products'>Trending Products</h2>
 			<ProductCard productCardItems={getTrendingProducts(products)} />
 			<Footer />
-			{console.log(getTrendingProducts(products))}
 		</div>
 	);
 }

@@ -9,11 +9,16 @@ import { useState, useEffect } from "react";
 function App() {
 	// This variable keeps the data from the API
 	const [products, setProducts] = useState(null);
+	const [getWishItemNumberForNav, setgetWishItemNumberForNav] = useState("");
 	// This function fetches data from the API and stores it in the varaible 'products'
 	const getProducts = async () => {
 		const productsRaw = await fetch("https://fakestoreapi.com/products");
 		const productJson = await productsRaw.json();
 		setProducts(productJson);
+	};
+
+	const getWishItemNumber = (num) => {
+		setgetWishItemNumberForNav(num);
 	};
 
 	// Use effect with the square brackes [] sets the value of our variables when the page is first rendered
@@ -24,14 +29,18 @@ function App() {
 	return (
 		<div>
 			<BrowserRouter>
-				<Navbar />
+				<Navbar handlePlaceWishItemNumber={getWishItemNumberForNav} />
 				<div style={{ marginTop: "90px" }}>
 					<Routes>
 						<Route path='/' element={<Home products={products} />}></Route>
 						<Route
 							path='/products'
 							element={<Products products={products} />}></Route>
-						<Route path='/wishlist' element={<Wishlist />}></Route>
+						<Route
+							path='/wishlist'
+							element={
+								<Wishlist handleGetWishItemNumber={getWishItemNumber} />
+							}></Route>
 					</Routes>
 				</div>
 			</BrowserRouter>
