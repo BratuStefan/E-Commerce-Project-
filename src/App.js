@@ -24,7 +24,7 @@ function App() {
 		<div>
 			<BrowserRouter>
 				<Navbar />
-				<div style={{ marginTop: "90px" }}>
+				<div className='pages_container'>
 					<Routes>
 						<Route path='/' element={<Home products={products} />}></Route>
 						<Route

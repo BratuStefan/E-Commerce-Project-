@@ -4,6 +4,7 @@ import ProductCard from "../common/ProductCard";
 import SearchBar from "../components/Products/SearchBar";
 import Footer from "../common/Footer";
 import { useState, useEffect } from "react";
+import "./Products.css";
 
 function Products({ products }) {
 	/* products - contains all the items from the API. 
@@ -57,7 +58,7 @@ function Products({ products }) {
 
 	return (
 		<>
-			<Container fluid>
+			<Container fluid id='products_main_container'>
 				<Row>
 					<Col lg='3'>
 						<h2>Product Categories</h2>

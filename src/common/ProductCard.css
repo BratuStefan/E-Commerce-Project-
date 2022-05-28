@@ -8,11 +8,28 @@
 }
 
 #product_column img {
+    min-height: 380px;
     max-height: 380px;
+    min-width: 200px;
     max-width: 200px;
+    object-fit: contain;
 }
 
 .product_price_and_wishlist {
     display: flex;
     gap: 1%;
 }
+
+.product_card_button {
+    font-size: 5px;
+    font-size: 16px;
+    width: 130px;
+}
+
+.product_card_button p {
+    display: flex;
+    font-size: 10px;
+}
+
+
+

@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Navbar() {
-	const [wishListNrOfItems, setwishListNrOfItems] = useState(() => {
+	const [wishListNrOfItems, setWishListNrOfItems] = useState(() => {
 		const saved = localStorage.getItem("productList");
 		const initialValue = JSON.parse(saved);
 		return initialValue || "";
 	});
 
-	useEffect(() => {
-		setwishListNrOfItems(() => {
-			const saved = localStorage.getItem("productList");
-			const initialValue = JSON.parse(saved);
-			return initialValue || "";
-		});
-	});
+	// useEffect(() => {
+	// 	setWishListNrOfItems(() => {
+	// 		const saved = localStorage.getItem("productList");
+	// 		const initialValue = JSON.parse(saved);
+	// 		return initialValue || "";
+	// 	});
+	// });
 
 	return (
 		<div className='nav_container'>
@@ -30,11 +30,11 @@ function Navbar() {
 			</div>
 			<div className='nav_section nav_center_section'>
 				<img
-					src='https://seeklogo.com/images/L/luxury-logo-C88D07841D-seeklogo.com.png'
+					src='https://i.pinimg.com/736x/72/ed/3a/72ed3a4ee99cdd29917b5affcafa2e63.jpg'
 					alt='site_logo'
 					className='nav_item'
 				/>
-				<h4 className='nav_item'>Logo Text if Any</h4>
+				<h4 className='nav_item'>White Fox</h4>
 			</div>
 			<div className='nav_section'>
 				<Link to='/wishlist' className='nav_item'>

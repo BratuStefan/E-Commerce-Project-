@@ -31,12 +31,13 @@ function ProductCard({ productCardItems }) {
 								<img src={product.image} alt='product_image' />
 								{product.title}
 								<div className='product_price_and_wishlist'>
-									{product.price}${" "}
+									<div className='product_card_price'>{product.price}$ </div>
 									<button
+										className='product_card_button'
 										onClick={() => {
 											addToWishlist(product);
 										}}>
-										<h6>Add To Wishlist</h6>
+										Add To Wishlist
 									</button>
 								</div>
 							</Col>

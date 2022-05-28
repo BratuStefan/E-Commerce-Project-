@@ -1,3 +1,43 @@
 body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
     overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 1rem;
+
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 100px;
+}
+
+.pages_container {
+    padding-top: 10%;
+}
+
+@media(max-width: 1300px) {
+    .pages_container {
+        padding-top: 20%;
+    }
+}
+
+@media(max-width: 768px) {
+    .pages_container{
+        padding-top: 35%;
+    }
+}
+
+@media(max-width: 500px) {
+    .pages_container{
+        padding-top: 40%;
+    }
 }

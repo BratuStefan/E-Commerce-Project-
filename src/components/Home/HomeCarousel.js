@@ -31,7 +31,7 @@ function HomeCarousel() {
 		<Container fluid className='carousel_container'>
 			<Row>
 				<Col md='11' className='mx-auto'>
-					<UncontrolledCarousel items={items} className='carousel_proper' />
+					<UncontrolledCarousel items={items} id='carousel_proper' />
 					<div className='carousel_text'>
 						<h1>Experience True Confort</h1>
 						<p>

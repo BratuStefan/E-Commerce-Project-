@@ -8,6 +8,9 @@
     margin-top: 2%;
 }
 
+.category_text {
+    text-shadow: 1px 1px 1px black;
+}
 
 .category_button {
     border: none;
@@ -20,6 +23,9 @@
     top: 40%;
     right: 25%;
     left: 25%;
+    border-radius: 25px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px black;
 }
 
 
@@ -37,7 +43,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
+    max-width: 300px ;
     padding: 0;
     position: relative;
     max-height: 500px;
@@ -63,5 +69,14 @@
     height: 100%;
     overflow: visible;
     object-fit: contain;
-    
+}
+
+#category_images {
+    border-radius: 15px;
+}
+
+@media(max-width: 2000px) {
+    #catogories_column {
+        max-width: 400px;
+    }
 }

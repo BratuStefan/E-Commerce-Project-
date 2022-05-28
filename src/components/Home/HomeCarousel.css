@@ -3,6 +3,18 @@
   position: relative;
 }
 
+.d-block {
+  border-radius: 25px;
+}
+
+.carousel-control-prev {
+  display: none;
+}
+
+.carousel-control-next {
+  display: none;
+}
+
 .carousel_text {
   width: 50%;
   height: 100%;
@@ -12,10 +24,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  bottom: 20%;
+  top: 0.1%;
   color: white;
   pointer-events: none;
   text-align: center;
+  text-shadow: 1px 1px 1px black;
+  font-size: 20px;
+  color: lightgray;
+  backdrop-filter: blur(2px)
+}
+
+.carousel_text h1 {
+  font-size: 40px;
+  color: black;
+  background-color: white;
+  display: inline;
+  padding: 0.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.carousel_text p {
+  color: white;
+  background-color: black;
+  display: inline;
+  padding: 0.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 20px;
+  opacity: 0.8;
 }
 
 .carousel_text button {
@@ -41,5 +80,11 @@
     justify-content: center;
     text-align: center;
     width: 100%;  
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
+
+ .carousel_text_mobile p {
+   display: none;
+ }
 }

@@ -24,7 +24,7 @@ function HomeCategories({ productCategories }) {
 									sm='11'
 									id='catogories_column'
 									className='mt-3'>
-									<h3>{cat.category}</h3>
+									<h3 className='category_'>{cat.category}</h3>
 									<Link to='products'>
 										<button className='category_button'>DISCOVER NOW</button>
 									</Link>
@@ -32,21 +32,25 @@ function HomeCategories({ productCategories }) {
 										<img
 											src='https://i.pinimg.com/736x/12/52/29/12522937c5e329344f3035e6711bdb71.jpg'
 											alt="men's_clothing_category_image"
+											id='category_images'
 										/>
 									) : cat.category === "women's clothing" ? (
 										<img
 											src='https://images.unsplash.com/photo-1572804013427-4d7ca7268217?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765'
 											alt="women's_clothing_category_image"
+											id='category_images'
 										/>
 									) : cat.category === "jewelery" ? (
 										<img
 											src='https://images.unsplash.com/photo-1558554745-e862ef8538bd?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764'
 											alt='jewelery_category_image'
+											id='category_images'
 										/>
 									) : cat.category === "electronics" ? (
 										<img
 											src='https://images.unsplash.com/photo-1575561986697-55ebf69dc571?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765'
 											alt='electronics_catogory_image'
+											id='category_images'
 										/>
 									) : (
 										""
