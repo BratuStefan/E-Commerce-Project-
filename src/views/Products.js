@@ -69,8 +69,10 @@ function Products({ products }) {
 								}}
 								style={{
 									backgroundColor:
-										categories === "men's clothing" ? "red" : "inherit",
-								}}>
+										categories === "men's clothing" ? "black" : "white",
+									color: categories === "men's clothing" ? "white" : "black",
+								}}
+								className='producs_category_buttons'>
 								Men's clothing
 							</button>
 						</h4>
@@ -81,8 +83,10 @@ function Products({ products }) {
 								}}
 								style={{
 									backgroundColor:
-										categories === "women's clothing" ? "red" : "inherit",
-								}}>
+										categories === "women's clothing" ? "black" : "white",
+									color: categories === "women's clothing" ? "white" : "black",
+								}}
+								className='producs_category_buttons'>
 								Women's clothing
 							</button>
 						</h4>
@@ -93,8 +97,10 @@ function Products({ products }) {
 								}}
 								style={{
 									backgroundColor:
-										categories === "electronics" ? "red" : "inherit",
-								}}>
+										categories === "electronics" ? "black" : "white",
+									color: categories === "electronics" ? "white" : "black",
+								}}
+								className='producs_category_buttons'>
 								Electronics
 							</button>
 						</h4>
@@ -105,8 +111,10 @@ function Products({ products }) {
 								}}
 								style={{
 									backgroundColor:
-										categories === "jewelery" ? "red" : "inherit",
-								}}>
+										categories === "jewelery" ? "black" : "white",
+									color: categories === "jewelery" ? "white" : "black",
+								}}
+								className='producs_category_buttons'>
 								Jewlery
 							</button>
 						</h4>

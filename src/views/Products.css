@@ -2,3 +2,18 @@
     padding-left: 6%;
     padding-right: 6%;
 }
+
+.producs_category_buttons {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.producs_category_buttons:hover {
+  color: white !important;
+  background-color: black !important;
+}

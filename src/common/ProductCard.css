@@ -1,3 +1,10 @@
+
+#product_row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5%;
+}
+
 #product_column {
     display: flex;
     flex-direction: column;
@@ -5,6 +12,13 @@
     align-items: center;
     text-align: center;
     margin-bottom: 1%;
+    border: 1px solid white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 20px;
+    max-width: 290px;
+    min-height: 600px;
+    gap: 10px;
 }
 
 #product_column img {
@@ -17,19 +31,34 @@
 
 .product_price_and_wishlist {
     display: flex;
-    gap: 1%;
+    gap: 3.5%;
 }
 
 .product_card_button {
-    font-size: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-shadow: 0.5px 0.5px 0.5px black;
+    font-weight: 400;
+    transition: 0.2s;
+    opacity: 0.9;
     font-size: 16px;
     width: 130px;
+}
+
+.product_card_button:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
 }
 
 .product_card_button p {
     display: flex;
     font-size: 10px;
 }
+
 
 
 

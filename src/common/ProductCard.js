@@ -23,11 +23,11 @@ function ProductCard({ productCardItems }) {
 
 	return (
 		<Container>
-			<Row>
+			<Row id='product_row'>
 				{productCardItems ? (
 					productCardItems.map((product, index) => {
 						return (
-							<Col key={"product_" + index} id='product_column' lg='3'>
+							<Col key={"product_" + index} id='product_column' lg='3' sm='12'>
 								<img src={product.image} alt='product_image' />
 								{product.title}
 								<div className='product_price_and_wishlist'>

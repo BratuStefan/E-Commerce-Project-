@@ -41,7 +41,7 @@ function HomeCarousel() {
 							<span className='home_text_red'> feel</span>
 						</p>
 						<Link to='/products'>
-							<button>DISCOVER NOW</button>
+							<button className='carousel_button'>DISCOVER NOW</button>
 						</Link>
 					</div>
 				</Col>
@@ -55,7 +55,7 @@ function HomeCarousel() {
 							<span className='home_text_red'> feel</span>
 						</p>
 						<Link to='/products'>
-							<button>DISCOVER NOW</button>
+							<button className='carousel_button'>DISCOVER NOW</button>
 						</Link>
 					</div>
 				</Col>

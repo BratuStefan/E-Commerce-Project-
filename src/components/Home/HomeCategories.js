@@ -7,7 +7,6 @@ function HomeCategories({ productCategories }) {
 	return (
 		<Container className='categories_container' fluid>
 			<Row className='gap-3' id='categories_row'>
-				<h2> - Product Categories - </h2>
 				{productCategories ? (
 					productCategories
 						.reduce((unique, o) => {
@@ -24,7 +23,7 @@ function HomeCategories({ productCategories }) {
 									sm='11'
 									id='catogories_column'
 									className='mt-3'>
-									<h3 className='category_'>{cat.category}</h3>
+									<h3>{cat.category}</h3>
 									<Link to='products'>
 										<button className='category_button'>DISCOVER NOW</button>
 									</Link>

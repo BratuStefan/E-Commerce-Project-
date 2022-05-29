@@ -1,3 +1,5 @@
+import "./SearchBar.css";
+
 import { useEffect, useState } from "react";
 function SearchBar({ handleGetSearchResults }) {
 	const [inputSearch, setImputSearch] = useState("");
@@ -10,11 +12,12 @@ function SearchBar({ handleGetSearchResults }) {
 		handleGetSearchResults(inputSearch);
 	}, [inputSearch]);
 	return (
-		<div>
+		<div className='search_container'>
 			<input
+				className='product_searchbar'
 				value={inputSearch}
 				type='text'
-				placeholder='search...'
+				placeholder='Search...'
 				onChange={(e) => {
 					setImputSearch(e.target.value);
 				}}

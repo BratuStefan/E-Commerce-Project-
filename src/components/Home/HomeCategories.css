@@ -3,11 +3,7 @@
     justify-content: center;
 }
 
-.categories_container h2 {
-    text-align: center;
-    margin-top: 2%;
-}
-
+   
 .category_text {
     text-shadow: 1px 1px 1px black;
 }
@@ -26,11 +22,13 @@
     border-radius: 25px;
     font-weight: 500;
     text-shadow: 1px 1px 1px black;
+    transition: 0.3s;
 }
 
 
 .category_button:hover {
     background: #eee;
+    opacity: 0.8;
 }
 
 #categories_row {
@@ -56,6 +54,7 @@
     left: 25%;
     right: 25%;
     bottom: 60%;
+    opacity: 0.9;
 }
 
 #catogories_column h3::first-letter {
@@ -74,6 +73,7 @@
 #category_images {
     border-radius: 15px;
 }
+
 
 @media(max-width: 2000px) {
     #catogories_column {

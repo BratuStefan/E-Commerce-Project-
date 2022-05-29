@@ -1,5 +1,36 @@
-.trending_products {
+.categories_heading {
+    padding: 10px;
     text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.trending_products {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+@media(max-width: 768px) {
+    .categories_heading {
+        margin-bottom: 4%;
+    }
+
+    .trending_products {
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
 }

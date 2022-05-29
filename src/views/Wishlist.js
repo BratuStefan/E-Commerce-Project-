@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
+import "./Wishlist.css";
+import Footer from "../common/Footer";
 
 function Wishlist() {
 	const [wishItem, setWishItem] = useState([]);
@@ -22,35 +24,50 @@ function Wishlist() {
 
 	return (
 		<>
-			<Container style={{ border: "1px solid black", minHeight: "50vh" }}>
-				<Row>
+			<h2 className='wishlist_heading'>Wishlist</h2>
+			<div id='wishlist_container' fluid>
+				<table>
+					<tr className='wishlist_table_headings'>
+						<th>Nr.</th>
+						<th>Product Image</th>
+						<th>Product Name</th>
+						<th>Unit Price</th>
+						<th>Delete Item</th>
+					</tr>
 					{wishItem ? (
-						wishItem.map((prod) => {
+						wishItem.map((prod, index) => {
 							return (
-								<Row key={"prod_wishlist_" + prod.id}>
-									<Col style={{ display: "flex", gap: "3%" }}>
+								<tr>
+									<td>{index + 1}</td>
+									<td>
 										<img
+											className='wishlist_product_image'
 											src={prod.image}
-											alt=''
-											style={{ maxHeight: "100px", maxWidth: "100px" }}
+											alt='wishlist_product_image'
 										/>
+									</td>
+									<td>
 										<h3>{prod.title}</h3>
-										<Button
-											color='danger'
+									</td>
+									<td>{prod.price}$</td>
+									<td>
+										<button
+											className='wishlist_button'
 											onClick={() => {
 												onDelete(prod.id);
 											}}>
-											Sterge!
-										</Button>
-									</Col>
-								</Row>
+											DELETE
+										</button>
+									</td>
+								</tr>
 							);
 						})
 					) : (
 						<>Please Add An Item!</>
 					)}
-				</Row>
-			</Container>
+				</table>
+			</div>
+			<Footer />
 		</>
 	);
 }

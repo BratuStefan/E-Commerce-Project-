@@ -1,0 +1,20 @@
+.search_container {
+    display: flex;
+    position: relative;
+}
+
+.product_searchbar {
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    border-radius: 20px;
+}
+
+@media(max-width:768px) {
+    .product_searchbar {
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+}

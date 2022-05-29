@@ -19,6 +19,7 @@ function Home({ products }) {
 			<div style={{ zIndex: "-2" }}>
 				<HomeCarousel />
 			</div>
+			<h2 className='categories_heading'>Product Categories</h2>
 			<HomeCategories productCategories={products} />
 			<h2 className='trending_products'>Trending Products</h2>
 			<ProductCard productCardItems={getTrendingProducts(products)} />

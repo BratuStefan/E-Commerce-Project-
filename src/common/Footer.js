@@ -1,6 +1,12 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
+import {
+	FacebookFilled,
+	TwitterSquareFilled,
+	LinkedinFilled,
+	GithubFilled,
+} from "@ant-design/icons";
 
 function Footer() {
 	return (
@@ -12,23 +18,23 @@ function Footer() {
 					</Link>
 					<h4 className='footer_link_separator'>-</h4>
 					<Link to='/products'>
-						<h4>Produse</h4>
+						<h4>Products</h4>
 					</Link>
 				</div>
-				<div className='footer_company_name'>Company Name @ 2022</div>
+				<div className='footer_company_name'>White Fox Inc. @ 2022</div>
 			</div>
 			<div className='footer_section_social_media'>
 				<a href='http://facebook.com'>
-					<button>Facebook</button>
+					<FacebookFilled className='footer_external_link' />
 				</a>
 				<a href='http://twitter.com'>
-					<button>Twitter</button>
+					<TwitterSquareFilled className='footer_external_link' />
 				</a>
 				<a href='http://linkedin.com'>
-					<button>LinkedIn</button>
+					<LinkedinFilled className='footer_external_link' />
 				</a>
 				<a href='http://github.com/'>
-					<button>GitHub</button>
+					<GithubFilled className='footer_external_link' />
 				</a>
 			</div>
 		</div>
