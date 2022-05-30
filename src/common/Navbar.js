@@ -10,13 +10,13 @@ function Navbar() {
 		return initialValue || "";
 	});
 
-	// useEffect(() => {
-	// 	setWishListNrOfItems(() => {
-	// 		const saved = localStorage.getItem("productList");
-	// 		const initialValue = JSON.parse(saved);
-	// 		return initialValue || "";
-	// 	});
-	// });
+	useEffect(() => {
+		setWishListNrOfItems(() => {
+			const saved = localStorage.getItem("productList");
+			const initialValue = JSON.parse(saved);
+			return initialValue || "";
+		});
+	});
 
 	return (
 		<div className='nav_container'>
