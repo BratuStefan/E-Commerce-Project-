@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Navbar() {
+	// contains the existing data from loaclstorage. It's used  to dsiplay the numer of itmes present in wishlist
 	const [wishListNrOfItems, setWishListNrOfItems] = useState(() => {
 		const saved = localStorage.getItem("productList");
 		const initialValue = JSON.parse(saved);
 		return initialValue || "";
 	});
-
+	// sets wishListNrOfItems to contain data from local storage. The function runs constantly to check is localstorage is updated
 	useEffect(() => {
 		setWishListNrOfItems(() => {
 			const saved = localStorage.getItem("productList");

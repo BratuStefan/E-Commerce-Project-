@@ -2,6 +2,8 @@ import "./ProductCard.css";
 import { Container, Row, Col } from "reactstrap";
 
 function ProductCard({ productCardItems }) {
+	/* addToWishlist - adds the data from productCardItems.map to local storage if localstorage has no data.
+	 				  - if the same data if already present in localstorage, nohting is added */
 	const addToWishlist = (product) => {
 		const productStorage = localStorage.getItem("productList");
 		if (productStorage === null) {

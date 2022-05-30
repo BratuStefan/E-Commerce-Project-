@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "reactstrap";
 import "./Wishlist.css";
 import Footer from "../common/Footer";
+import ScrollToTop from "react-scroll-to-top";
 
 function Wishlist() {
+	// contains infomation taken from local storage
 	const [wishItem, setWishItem] = useState([]);
-
+	// deletes data from 'wishItem' and localstorage
 	const onDelete = (id) => {
 		const filteredArray = wishItem.filter((prod) => {
 			return prod.id !== id;
@@ -13,7 +14,7 @@ function Wishlist() {
 		setWishItem(filteredArray);
 		localStorage.setItem("productList", JSON.stringify(filteredArray));
 	};
-
+	// sets the value of wishItem on first render, with data from localstorage if said data exists
 	useEffect(() => {
 		const prodListStorage = localStorage.getItem("productList");
 		if (prodListStorage) {
@@ -67,6 +68,7 @@ function Wishlist() {
 					)}
 				</table>
 			</div>
+			<ScrollToTop />
 			<Footer />
 		</>
 	);

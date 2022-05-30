@@ -7,6 +7,7 @@ function HomeCategories({ productCategories }) {
 	return (
 		<Container className='categories_container' fluid>
 			<Row className='gap-3' id='categories_row'>
+				{/* the .reduce method used below serves to cut duplicate categories, so only the 4 present are rered by the map function */}
 				{productCategories ? (
 					productCategories
 						.reduce((unique, o) => {

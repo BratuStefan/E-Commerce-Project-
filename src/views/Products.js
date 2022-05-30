@@ -5,6 +5,7 @@ import SearchBar from "../components/Products/SearchBar";
 import Footer from "../common/Footer";
 import { useState, useEffect } from "react";
 import "./Products.css";
+import ScrollToTop from "react-scroll-to-top";
 
 function Products({ products }) {
 	/* products - contains all the items from the API. 
@@ -28,30 +29,30 @@ function Products({ products }) {
 			setCategories(null);
 		}
 	};
-
+	// this function is passed to SeachBar.js via props and serves to get the data from the input and update the variable 'searchValue' with it
 	const getSearchResults = (input) => {
 		setSearchValue(input);
 	};
-
+	// filters the data from raw API data from 'product' with the data from 'cayegories'. The result is assigned to the variable 'filteredByCategory' in a useEffect
 	const filterChain = (prod, cat) => {
 		if (cat === null) return prod;
 		return prod.filter((a) => {
 			return a.category === cat;
 		});
 	};
-
+	// filters the data from 'filteredByCategory' with the data from 'searchValue'
 	const filterSearch = (filteredCat, searchResults) => {
 		if (!searchResults) return filteredCat;
 		return filteredCat.filter((b) => {
 			return b.title.toLowerCase().includes(searchResults);
 		});
 	};
-
+	// sets value of variables on first render
 	useEffect(() => {
 		setCategories(null);
 		setfilteredByCategory(products);
 	}, []);
-
+	// sets value of 'filteredByCategory' based on the changes in 'categories'
 	useEffect(() => {
 		setfilteredByCategory(filterChain(products, categories));
 	}, [categories]);
@@ -122,7 +123,10 @@ function Products({ products }) {
 					<Col>
 						<Container fluid>
 							<Row>
-								<SearchBar handleGetSearchResults={getSearchResults} />
+								<SearchBar
+									handleGetSearchResults={getSearchResults}
+									id='products_searchbar_fullscreen'
+								/>
 							</Row>
 							<Row>
 								<ProductCard
@@ -135,6 +139,7 @@ function Products({ products }) {
 					</Col>
 				</Row>
 			</Container>
+			<ScrollToTop />
 			<Footer />
 		</>
 	);
